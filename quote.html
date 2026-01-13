@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request an Estimate | Fury Fence</title>
+    <!-- Copy the embedded styles from index for a consistent look -->
+    <style>
+      /* Reset and base styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        color: #333333;
+        /* Light blush tint for background */
+        background-color: #fdf5f4;
+        line-height: 1.6;
+      }
+      .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      header {
+        background-color: #ffffff;
+        border-bottom: 2px solid #f0f0f0;
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+      }
+      .logo {
+        height: 96px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+      }
+      nav a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      nav a:hover {
+        color: #c94a44;
+      }
+
+      .main-nav {
+        flex-grow: 1;
+      }
+
+      .header-cta {
+        margin-left: 1rem;
+      }
+      .btn-cta {
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        background-color: #c94a44;
+        color: #ffffff;
+        border-radius: 5px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .btn-cta:hover {
+        background-color: #a83a35;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #333333;
+      }
+      p {
+        margin-bottom: 1.5rem;
+        color: #555555;
+      }
+      .quote-form {
+        /* Use tinted background for form container */
+        background-color: #faf3f2;
+        padding: 2rem;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+      }
+      .quote-form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #333333;
+      }
+      .quote-form input,
+      .quote-form select {
+        width: 100%;
+        padding: 0.6rem;
+        margin-bottom: 1rem;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        background-color: #ffffff;
+        color: #333333;
+        font-size: 1rem;
+      }
+      /* Style the textarea like the other inputs and prevent resizing */
+      .quote-form textarea {
+        width: 100%;
+        padding: 0.6rem;
+        margin-bottom: 1rem;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        background-color: #ffffff;
+        color: #333333;
+        font-size: 1rem;
+        resize: none;
+        height: 120px;
+      }
+      .quote-form button {
+        display: inline-block;
+        padding: 0.8rem 1.8rem;
+        background-color: #c94a44;
+        color: #ffffff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+      .quote-form button:hover {
+        background-color: #a83a35;
+      }
+      #quote-messages {
+        margin-top: 1rem;
+        text-align: center;
+        font-weight: 600;
+        color: #c94a44;
+      }
+
+      /* Footer navigation styles */
+      footer {
+        /* Tinted footer background to match the site */
+        background-color: #f6eae9;
+        padding: 1.5rem 0;
+        text-align: center;
+        color: #777777;
+        font-size: 0.9rem;
+        margin-top: 3rem;
+      }
+      .footer-nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+      }
+      .footer-nav a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+      .footer-nav a:hover {
+        color: #c94a44;
+      }
+      .footer-cta {
+        margin-top: 0.5rem;
+      }
+      .footer-cta .btn-cta {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <a href="index.html"><img src="logo.png" alt="Fury Fence logo" class="logo" /></a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-cta">
+          <a href="quote.html" class="btn-cta">Request an Estimate</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Request an Estimate</h1>
+        <p>Please provide the following details so we can prepare an accurate estimate for your fencing project.</p>
+        <form id="quote-form" class="quote-form">
+          <!-- Personal information fields -->
+          <label for="quoteName">Your Name</label>
+          <input type="text" id="quoteName" name="name" placeholder="First and Last Name" />
+
+          <label for="quoteEmail">Email</label>
+          <input type="email" id="quoteEmail" name="email" placeholder="you@example.com" required />
+
+          <label for="quotePhone">Phone</label>
+          <input type="tel" id="quotePhone" name="phone" placeholder="(xxx) xxx‑xxxx" required />
+
+          <label for="quoteAddress">Address</label>
+          <input type="text" id="quoteAddress" name="address" placeholder="Street Address, City" />
+
+          <!-- Project details -->
+          <label for="fenceType">Fence Type</label>
+          <input type="text" id="fenceType" name="fenceType" placeholder="e.g., Chainlink, Vinyl, Wood" />
+
+          <label for="linearFootage">Linear Footage</label>
+          <input type="number" id="linearFootage" name="linearFootage" min="0" placeholder="Total length in feet" />
+
+          <label for="fenceHeight">Fence Height</label>
+          <input type="number" id="fenceHeight" name="fenceHeight" min="0" step="0.1" placeholder="Height in feet" />
+
+          <label for="corners">Fence Corners</label>
+          <input type="number" id="corners" name="corners" min="0" placeholder="Number of corners" />
+
+          <label for="endpoints">Fence End Points</label>
+          <input type="number" id="endpoints" name="endpoints" min="0" placeholder="Number of end posts" />
+
+          <label for="singleGates">Single Swing Gates</label>
+          <input type="number" id="singleGates" name="singleGates" min="0" placeholder="Number of single swing gates" />
+
+          <label for="doubleGates">Double Swing Gates</label>
+          <input type="number" id="doubleGates" name="doubleGates" min="0" placeholder="Number of double swing gates" />
+
+          <label for="cantileverGates">Cantilever Gates</label>
+          <input type="number" id="cantileverGates" name="cantileverGates" min="0" placeholder="Number of cantilever gates" />
+
+          <!-- Description field for clients who may not know measurements -->
+          <label for="jobDescription">Description of Job</label>
+          <textarea id="jobDescription" name="description" placeholder="Brief description of the project"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+        <div id="quote-messages"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-cta">
+          <a href="quote.html" class="btn-cta">Request an Estimate</a>
+        </div>
+        <p style="margin-top: 1rem;">&copy; 2025 Fury Fence. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      // Handle quote form submission and send data to backend
+      document.addEventListener('DOMContentLoaded', () => {
+        const qForm = document.getElementById('quote-form');
+        const qMessages = document.getElementById('quote-messages');
+        qForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          // Gather all form fields
+          const name = document.getElementById('quoteName').value.trim();
+          const email = document.getElementById('quoteEmail').value.trim();
+          const phone = document.getElementById('quotePhone').value.trim();
+          const address = document.getElementById('quoteAddress').value.trim();
+          const fenceType = document.getElementById('fenceType').value.trim();
+          const linearFootage = document.getElementById('linearFootage').value.trim();
+          const fenceHeight = document.getElementById('fenceHeight').value.trim();
+          const corners = document.getElementById('corners').value.trim();
+          const endpoints = document.getElementById('endpoints').value.trim();
+          const singleGates = document.getElementById('singleGates').value.trim();
+          const doubleGates = document.getElementById('doubleGates').value.trim();
+          const cantileverGates = document.getElementById('cantileverGates').value.trim();
+          const description = document.getElementById('jobDescription').value.trim();
+
+          // Basic validation: only email and phone are required
+          if (!email || !phone) {
+            qMessages.textContent = 'Please provide your email and phone number.';
+            qMessages.style.color = '#e56b6f';
+            return;
+          }
+          try {
+            const response = await fetch('/api/quote', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                name,
+                email,
+                phone,
+                address,
+                fenceType,
+                linearFootage,
+                fenceHeight,
+                corners,
+                endpoints,
+                singleGates,
+                doubleGates,
+                cantileverGates,
+                description,
+              }),
+            });
+            if (response.ok) {
+              qMessages.style.color = '#c94a44';
+              qMessages.textContent = 'Thank you! Your quote request has been submitted. We will contact you shortly.';
+              qForm.reset();
+            } else {
+              qMessages.style.color = '#e56b6f';
+              qMessages.textContent = 'Sorry, there was an error submitting your request. Please try again later.';
+            }
+          } catch (err) {
+            qMessages.style.color = '#e56b6f';
+            qMessages.textContent = 'Sorry, there was an error submitting your request. Please try again later.';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Projects | Fury Fence</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        color: #333333;
+        /* Add a subtle secondary tint to soften the page colour */
+        background-color: #fdf5f4;
+        line-height: 1.6;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      header {
+        background-color: #ffffff;
+        border-bottom: 2px solid #f0f0f0;
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+      }
+      .logo {
+        height: 96px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+      }
+      nav a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      nav a:hover {
+        color: #c94a44;
+      }
+
+      .main-nav {
+        flex-grow: 1;
+      }
+
+      .header-cta {
+        margin-left: 1rem;
+      }
+      .btn-cta {
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        background-color: #c94a44;
+        color: #ffffff;
+        border-radius: 5px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .btn-cta:hover {
+        background-color: #a83a35;
+      }
+      h1 {
+        font-size: 2rem;
+        margin: 2rem 0 1rem;
+        text-align: center;
+        color: #333333;
+      }
+      .projects-page {
+        /* Lightly tinted section background */
+        background-color: #faf3f2;
+        padding: 3rem 0;
+      }
+      /* Slider styles for projects page */
+      .project-slider {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        overflow: hidden;
+        /* Thicker border with accent colour */
+        border: 4px solid #c94a44;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      }
+      /* Container for slides */
+      .project-slider .slides {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        width: 100%;
+        height: 500px;
+      }
+      .project-slider .slides::-webkit-scrollbar {
+        display: none;
+      }
+      .project-slide {
+        flex: 0 0 100%;
+        height: 500px;
+        scroll-snap-align: start;
+        position: relative;
+      }
+      .project-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      /* Navigation buttons */
+      .project-slider button.prev,
+      .project-slider button.next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.5);
+        color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 2;
+        font-size: 1.5rem;
+        line-height: 40px;
+        text-align: center;
+      }
+      .project-slider button.prev {
+        left: 10px;
+      }
+      .project-slider button.next {
+        right: 10px;
+      }
+      /* Hide default bulletless caption */
+      .project-caption {
+        display: none;
+      }
+      /* Project description below slider */
+      .project-description {
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #444444;
+        text-align: center;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      footer {
+        /* Light blush tint for footer background */
+        background-color: #f6eae9;
+        padding: 1.5rem 0;
+        text-align: center;
+        color: #777777;
+        font-size: 0.9rem;
+        margin-top: 3rem;
+      }
+
+      /* Footer navigation styles */
+      .footer-nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+      }
+      .footer-nav a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+      .footer-nav a:hover {
+        color: #c94a44;
+      }
+      .footer-cta {
+        margin-top: 0.5rem;
+      }
+      .footer-cta .btn-cta {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <a href="index.html"><img src="logo.png" alt="Fury Fence logo" class="logo" /></a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-cta">
+          <a href="quote.html" class="btn-cta">Request an Estimate</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="projects-page">
+        <div class="container">
+          <h1>Project Gallery</h1>
+          <div class="project-slider">
+            <!-- Previous button -->
+            <button class="prev" aria-label="Previous">&#10094;</button>
+            <!-- Slides container allowing horizontal scroll -->
+            <div class="slides">
+              <div class="project-slide"><img src="completed_job1.jpg" alt="Fury Fence project 1" /></div>
+              <div class="project-slide"><img src="project2.jpg" alt="Fury Fence project 2" /></div>
+              <div class="project-slide"><img src="project3.jpg" alt="Fury Fence project 3" /></div>
+              <div class="project-slide"><img src="project4.jpg" alt="Fury Fence project 4" /></div>
+              <div class="project-slide"><img src="project5.jpg" alt="Fury Fence project 5" /></div>
+              <div class="project-slide"><img src="project6.jpg" alt="Fury Fence project 6" /></div>
+              <div class="project-slide"><img src="project7.jpg" alt="Fury Fence project 7" /></div>
+              <div class="project-slide"><img src="project8.jpg" alt="Fury Fence project 8" /></div>
+              <div class="project-slide"><img src="project9.jpg" alt="Fury Fence project 9" /></div>
+              <div class="project-slide"><img src="project10.jpg" alt="Fury Fence project 10" /></div>
+              <div class="project-slide"><img src="project11.jpg" alt="Fury Fence project 11" /></div>
+            </div>
+            <!-- Next button -->
+            <button class="next" aria-label="Next">&#10095;</button>
+          </div>
+          <!-- General description for all projects -->
+          <p class="project-description">
+            Our project portfolio showcases the strength and versatility of our chainlink
+            fences and custom gates across a range of industrial, commercial and
+            residential applications. From securing heavy‑duty sites to creating safe
+            play areas and pet enclosures, we deliver durable solutions tailored to each
+            property.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-cta">
+          <a href="quote.html" class="btn-cta">Request an Estimate</a>
+        </div>
+        <p style="margin-top: 1rem;">&copy; 2025 Fury Fence. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      // Basic slider controls for project gallery
+      document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.querySelector('.project-slider .slides');
+        const prevBtn = document.querySelector('.project-slider .prev');
+        const nextBtn = document.querySelector('.project-slider .next');
+        function scrollBySlide(direction) {
+          const slideWidth = slider.clientWidth;
+          if (direction === 'next') {
+            slider.scrollLeft += slideWidth;
+          } else {
+            slider.scrollLeft -= slideWidth;
+          }
+        }
+        if (prevBtn) prevBtn.addEventListener('click', () => scrollBySlide('prev'));
+        if (nextBtn) nextBtn.addEventListener('click', () => scrollBySlide('next'));
+      });
+    </script>
+  </body>
+</html>

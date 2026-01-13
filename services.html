@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services | Fury Fence</title>
+    <!-- Shared styles for the site -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        color: #333333;
+        /* Apply a subtle secondary tint across pages to avoid harsh white */
+        background-color: #fdf5f4;
+        line-height: 1.6;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      header {
+        background-color: #ffffff;
+        border-bottom: 2px solid #f0f0f0;
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+      }
+      .logo {
+        height: 96px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+      }
+      nav a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      nav a:hover {
+        color: #c94a44;
+      }
+
+      /* Allow nav to grow and center within header */
+      .main-nav {
+        flex-grow: 1;
+      }
+
+      /* Header call-to-action styling */
+      .header-cta {
+        margin-left: 1rem;
+      }
+      .btn-cta {
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        background-color: #c94a44;
+        color: #ffffff;
+        border-radius: 5px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .btn-cta:hover {
+        background-color: #a83a35;
+      }
+      h1 {
+        font-size: 2rem;
+        margin: 2rem 0 1rem;
+        color: #333333;
+        text-align: center;
+      }
+      .services-page {
+        /* Lighten the background with a blush tint */
+        background-color: #faf3f2;
+        padding: 3rem 0;
+      }
+      /* Service sections are displayed vertically with full-width backgrounds */
+      .service-section {
+        position: relative;
+        width: 100%;
+        min-height: 300px;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .service-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+      }
+      .service-content {
+        position: relative;
+        z-index: 2;
+        color: #ffffff;
+        text-align: center;
+        padding: 2rem;
+      }
+      .service-content h3 {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+        color: #ffffff;
+      }
+      .service-content p {
+        font-size: 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.5;
+        color: #e0e0e0;
+      }
+      /* Specific background images for services */
+      .service-installation { background-image: url('project2.jpg'); background-size: cover; background-position: center; }
+      .service-gate { background-image: url('project7.jpg'); background-size: cover; background-position: center; }
+      .service-material { background-image: url('project3.jpg'); background-size: cover; background-position: center; }
+      footer {
+        /* Use a very light tinted footer background instead of plain grey */
+        background-color: #f6eae9;
+        padding: 1.5rem 0;
+        text-align: center;
+        color: #777777;
+        font-size: 0.9rem;
+        margin-top: 3rem;
+      }
+
+      /* Footer navigation styles */
+      .footer-nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+      }
+      .footer-nav a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+      .footer-nav a:hover {
+        color: #c94a44;
+      }
+      .footer-cta {
+        margin-top: 0.5rem;
+      }
+      .footer-cta .btn-cta {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <a href="index.html"><img src="logo.png" alt="Fury Fence logo" class="logo" /></a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-cta">
+          <a href="quote.html" class="btn-cta">Request an Estimate</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="services-page">
+        <div class="container">
+          <h1>Our Services</h1>
+          <!-- New vertical service sections -->
+          <div class="service-section service-installation">
+            <div class="service-content">
+              <h3>Fence Installation</h3>
+              <p>
+                Professional installation of high‑tensile chainlink fences to secure
+                industrial sites, commercial properties and residential homes.
+              </p>
+            </div>
+          </div>
+          <div class="service-section service-gate">
+            <div class="service-content">
+              <h3>Gate Supply &amp; Install</h3>
+              <p>
+                Custom swinging and sliding gates built for industrial, commercial
+                and residential use—engineered to withstand heavy use and harsh
+                environments.
+              </p>
+            </div>
+          </div>
+          <div class="service-section service-material">
+            <div class="service-content">
+              <h3>Material Supply</h3>
+              <p>
+                Quality chainlink fabric, posts and hardware for contractors and
+                resellers serving industrial, commercial and residential fencing
+                projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-cta">
+          <a href="quote.html" class="btn-cta">Request an Estimate</a>
+        </div>
+        <p style="margin-top: 1rem;">&copy; 2025 Fury Fence. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

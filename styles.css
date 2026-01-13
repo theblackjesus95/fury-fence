@@ -1,0 +1,344 @@
+/*
+ * Fury Fence website styles
+ *
+ * This stylesheet defines the layout, typography, and colours used across
+ * the site. It has been designed to complement the rugged aesthetic of
+ * industrial chainlink fencing while remaining modern and accessible on
+ * devices of all sizes.
+ */
+
+/* Reset some basic elements and apply a default font family */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: #f0f0f0;
+  background-color: #0e0e0e;
+  line-height: 1.6;
+}
+
+/* Utility class for constraining content width */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+header {
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #3a2e28;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  height: 64px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Navigation toggle (hamburger) styles */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #e8e8e8;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Transform lines when menu is open */
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+nav a {
+  color: #e8e8e8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #c94a44;
+}
+
+/* Hero section styling */
+.hero {
+  background-color: #111;
+  background-image: url("/home/oai/share/A9224F37-B35F-4FA6-AD2E-B35FFE292DD4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right 10% center;
+  position: relative;
+  padding: 4rem 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #d8d8d8;
+}
+
+/* General button styling */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background-color: #c94a44;
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #a83a35;
+}
+
+/* Services section styling */
+.services {
+  background-color: #121212;
+  padding: 4rem 0;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.service-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service-item {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 280px;
+  color: #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.service-item h3 {
+  margin-bottom: 0.8rem;
+  color: #c94a44;
+  font-size: 1.3rem;
+}
+
+.service-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cccccc;
+}
+
+/* Responsive navigation styles */
+@media (max-width: 768px) {
+  /* Display the hamburger on small screens */
+  .nav-toggle {
+    display: flex;
+  }
+  /* Hide the nav menu by default */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1a1a1a;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid #3a2e28;
+    z-index: 10;
+  }
+  /* Show the nav menu when open */
+  .main-nav.open {
+    display: flex;
+  }
+  /* Override nav list style for mobile */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  /* Adjust hero content alignment */
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+/* About section styling */
+.about {
+  background-color: #0f0f0f;
+  padding: 4rem 0;
+  color: #e0e0e0;
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+/* Contact section styling */
+.contact {
+  background-color: #121212;
+  padding: 4rem 0;
+  color: #e0e0e0;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.contact p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #d0d0d0;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.contact textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.form-messages {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Footer styling */
+footer {
+  background-color: #1a1a1a;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #777777;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .service-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

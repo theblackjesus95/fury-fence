@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Fury Fence</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        color: #333333;
+        /* Apply a subtle secondary tint instead of stark white */
+        background-color: #fdf5f4;
+        line-height: 1.6;
+      }
+      .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      header {
+        background-color: #ffffff;
+        border-bottom: 2px solid #f0f0f0;
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+      }
+      .logo {
+        height: 96px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+      }
+      nav a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      nav a:hover {
+        color: #c94a44;
+      }
+
+      .main-nav {
+        flex-grow: 1;
+      }
+
+      .header-cta {
+        margin-left: 1rem;
+      }
+      .btn-cta {
+        display: inline-block;
+        padding: 0.6rem 1.4rem;
+        background-color: #c94a44;
+        color: #ffffff;
+        border-radius: 5px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .btn-cta:hover {
+        background-color: #a83a35;
+      }
+      h1 {
+        font-size: 2rem;
+        margin: 2rem 0 1rem;
+        text-align: center;
+        color: #333333;
+      }
+      .contact-page {
+        position: relative;
+        background-image: url('project5.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 4rem 0;
+        color: #ffffff;
+      }
+      .contact-page::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      }
+      .contact-card {
+        position: relative;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.95);
+        color: #333333;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 700px;
+        margin: 0 auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .contact-card h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #c94a44;
+      }
+      .contact-card p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        color: #555555;
+        text-align: center;
+      }
+      .contact-info {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-size: 0.95rem;
+        color: #555555;
+      }
+      .contact-info p {
+        margin-bottom: 0.3rem;
+      }
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      input,
+      textarea {
+        padding: 0.8rem;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        background-color: #ffffff;
+        color: #333333;
+        font-size: 1rem;
+      }
+      textarea {
+        resize: vertical;
+        height: 120px;
+      }
+      button {
+        display: inline-block;
+        padding: 0.8rem 1.8rem;
+        background-color: #c94a44;
+        color: #ffffff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #a83a35;
+      }
+      #contact-messages {
+        margin-top: 1rem;
+        text-align: center;
+        font-weight: 600;
+        color: #c94a44;
+      }
+      footer {
+        /* Tinted footer to match the overall colour scheme */
+        background-color: #f6eae9;
+        padding: 1.5rem 0;
+        text-align: center;
+        color: #777777;
+        font-size: 0.9rem;
+        margin-top: 3rem;
+      }
+
+      /* Footer navigation styles */
+      .footer-nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+      }
+      .footer-nav a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+      .footer-nav a:hover {
+        color: #c94a44;
+      }
+      .footer-cta {
+        margin-top: 0.5rem;
+      }
+      .footer-cta .btn-cta {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <a href="index.html"><img src="logo.png" alt="Fury Fence logo" class="logo" /></a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-cta">
+          <a href="quote.html" class="btn-cta">Request an Estimate</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="contact-page">
+        <div class="container">
+          <div class="contact-card">
+            <h1>Contact Us</h1>
+            <!-- Updated description to reflect general enquiries -->
+            <p>
+              Have questions about our services? Fill out the form below and we'll
+              get back to you as soon as possible. If you’re looking for a detailed
+              estimate, you can also <a href="quote.html" style="color: #c94a44; text-decoration: underline; font-weight: 600;">request an estimate here</a>.
+            </p>
+            <!-- Contact information details -->
+            <div class="contact-info">
+              <p><strong>Email:</strong> info@furyfence.com</p>
+              <p><strong>Phone:</strong> 825‑967‑0979</p>
+              <p><strong>Service Area:</strong> Edmonton &amp; surrounding communities</p>
+            </div>
+            <form id="contact-page-form">
+              <input type="text" id="contactName" name="name" placeholder="Your Name" required />
+              <input type="email" id="contactEmail" name="email" placeholder="Your Email" required />
+              <textarea id="contactMessage" name="message" placeholder="How can we help?" required></textarea>
+              <button type="submit">Submit</button>
+            </form>
+            <div id="contact-messages"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <!-- Footer navigation replicates the header navigation -->
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-cta">
+          <a href="quote.html" class="btn-cta">Request an Estimate</a>
+        </div>
+        <p style="margin-top: 1rem;">&copy; 2025 Fury Fence. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      // Contact page form submission using backend endpoint
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contact-page-form');
+        const messages = document.getElementById('contact-messages');
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const name = document.getElementById('contactName').value.trim();
+          const email = document.getElementById('contactEmail').value.trim();
+          const message = document.getElementById('contactMessage').value.trim();
+          if (!name || !email || !message) {
+            messages.textContent = 'Please fill out all fields before submitting.';
+            messages.style.color = '#e56b6f';
+            return;
+          }
+          try {
+            const response = await fetch('/api/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name, email, message }),
+            });
+            if (response.ok) {
+              messages.textContent = `Thank you, ${name}! We have received your message and will contact you soon.`;
+              messages.style.color = '#c94a44';
+              form.reset();
+            } else {
+              messages.textContent = 'Sorry, there was an error submitting your message. Please try again later.';
+              messages.style.color = '#e56b6f';
+            }
+          } catch (err) {
+            messages.textContent = 'Sorry, there was an error submitting your message. Please try again later.';
+            messages.style.color = '#e56b6f';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
