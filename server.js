@@ -144,48 +144,6 @@ Time: ${submission.timestamp}
   res.json({ success: true });
 });
 
-// Endpoint to update a note on a quote
-app.post('/api/update-quote-note', (req, res) => {
-  const { index, note } = req.body;
-  const filePath = path.join(__dirname, 'quote_requests.json');
-  let quotes = [];
-  try {
-    quotes = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  } catch (err) {
-    return res.status(500).json({ error: 'Failed to read quote requests.' });
-  }
-  const idx = parseInt(index, 10);
-  if (Number.isNaN(idx) || idx < 0 || idx >= quotes.length) {
-    return res.status(400).json({ error: 'Invalid index.' });
-  }
-  // Update note
-  quotes[idx].note = note || '';
-  fs.writeFileSync(filePath, JSON.stringify(quotes, null, 2));
-  return res.json({ success: true });
-});
-
-// Endpoint to update a note on a contact submission
-app.post('/api/update-contact-note', (req, res) => {
-  const { index, note } = req.body;
-  const filePath = path.join(__dirname, 'contact_submissions.json');
-  let contacts = [];
-  try {
-    contacts = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  } catch (err) {
-    return res.status(500).json({ error: 'Failed to read contact submissions.' });
-  }
-  const idx = parseInt(index, 10);
-  if (Number.isNaN(idx) || idx < 0 || idx >= contacts.length) {
-    return res.status(400).json({ error: 'Invalid index.' });
-  }
-  contacts[idx].note = note || '';
-  fs.writeFileSync(filePath, JSON.stringify(contacts, null, 2));
-  return res.json({ success: true });
-});
-
-// Serve static files from the current directory
-app.use(express.static(__dirname));
-
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
