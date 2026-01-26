@@ -13,8 +13,8 @@
       }
       body {
         color: #333333;
-        /* Apply a subtle secondary tint instead of stark white */
-        background-color: #fdf5f4;
+        /* Apply a subtle secondary tint derived from the new logo */
+        background-color: #fbf2f2;
         line-height: 1.6;
       }
       .container {
@@ -33,7 +33,7 @@
         padding: 1rem 0;
       }
       .logo {
-        height: 96px;
+        height: 120px;
       }
       nav ul {
         list-style: none;
@@ -48,7 +48,7 @@
         transition: color 0.3s ease;
       }
       nav a:hover {
-        color: #c94a44;
+        color: #772a2a;
       }
 
       .main-nav {
@@ -61,7 +61,7 @@
       .btn-cta {
         display: inline-block;
         padding: 0.6rem 1.4rem;
-        background-color: #c94a44;
+        background-color: #772a2a;
         color: #ffffff;
         border-radius: 5px;
         font-weight: 600;
@@ -69,7 +69,7 @@
         transition: background-color 0.3s ease;
       }
       .btn-cta:hover {
-        background-color: #a83a35;
+        background-color: #5a1f1f;
       }
       h1 {
         font-size: 2rem;
@@ -110,7 +110,7 @@
         font-size: 2rem;
         margin-bottom: 1rem;
         text-align: center;
-        color: #c94a44;
+        color: #772a2a;
       }
       .contact-card p {
         font-size: 1rem;
@@ -149,7 +149,7 @@
       button {
         display: inline-block;
         padding: 0.8rem 1.8rem;
-        background-color: #c94a44;
+        background-color: #772a2a;
         color: #ffffff;
         border-radius: 5px;
         text-decoration: none;
@@ -159,17 +159,17 @@
         cursor: pointer;
       }
       button:hover {
-        background-color: #a83a35;
+        background-color: #5a1f1f;
       }
       #contact-messages {
         margin-top: 1rem;
         text-align: center;
         font-weight: 600;
-        color: #c94a44;
+        color: #772a2a;
       }
       footer {
-        /* Tinted footer to match the overall colour scheme */
-        background-color: #f6eae9;
+        /* Tinted footer to match the new colour scheme */
+        background-color: #f6e4e4;
         padding: 1.5rem 0;
         text-align: center;
         color: #777777;
@@ -194,7 +194,7 @@
         transition: color 0.3s ease;
       }
       .footer-nav a:hover {
-        color: #c94a44;
+        color: #772a2a;
       }
       .footer-cta {
         margin-top: 0.5rem;
@@ -232,7 +232,7 @@
             <p>
               Have questions about our services? Fill out the form below and we'll
               get back to you as soon as possible. If you’re looking for a detailed
-              estimate, you can also <a href="quote.html" style="color: #c94a44; text-decoration: underline; font-weight: 600;">request an estimate here</a>.
+              estimate, you can also <a href="quote.html" style="color: #772a2a; text-decoration: underline; font-weight: 600;">request an estimate here</a>.
             </p>
             <!-- Contact information details -->
             <div class="contact-info">
@@ -292,7 +292,7 @@
             });
             if (response.ok) {
               messages.textContent = `Thank you, ${name}! We have received your message and will contact you soon.`;
-              messages.style.color = '#c94a44';
+              messages.style.color = '#772a2a';
               form.reset();
             } else {
               messages.textContent = 'Sorry, there was an error submitting your message. Please try again later.';

@@ -92,7 +92,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #c94a44;
+  color: #772a2a;
 }
 
 /* Hero section styling */
@@ -139,7 +139,7 @@ nav a:hover {
 .btn {
   display: inline-block;
   padding: 0.8rem 1.8rem;
-  background-color: #c94a44;
+  background-color: #772a2a;
   color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
@@ -150,7 +150,7 @@ nav a:hover {
 }
 
 .btn:hover {
-  background-color: #a83a35;
+  background-color: #5a1f1f;
 }
 
 /* Services section styling */
@@ -188,9 +188,10 @@ nav a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+/* Service card title color */
 .service-item h3 {
   margin-bottom: 0.8rem;
-  color: #c94a44;
+  color: #772a2a;
   font-size: 1.3rem;
 }
 
