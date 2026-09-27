@@ -1,0 +1,9 @@
+public/
+node_modules/
+*_submissions.json
+quote_requests.json
+.env
+.env.*
+!.env.example
+test-results/
+assets/

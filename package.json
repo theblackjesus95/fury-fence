@@ -4,10 +4,16 @@
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "node scripts/optimize-images.cjs && node scripts/build-site.cjs",
+    "preview": "node scripts/preview.cjs",
+    "test": "node scripts/check-site.cjs && node scripts/check-forms.cjs"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4"
   }
 }
