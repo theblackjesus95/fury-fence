@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Fury Fence layout preview</title>
+  <style>
+    body{margin:0;background:#d9ded8;color:#222;font:14px/1.5 Arial,sans-serif}header{padding:15px 24px;background:#fff;display:flex;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid #aaa}h1{font-size:16px;margin:0}label{font-weight:bold}select{font:inherit;padding:7px;margin-left:7px}p{margin:0;font-size:12px;color:#555}.canvas{padding:24px;overflow:auto}iframe{display:block;margin:0 auto;border:1px solid #aaa;background:#fff;height:844px}button{padding:8px 12px}
+  </style>
+</head>
+<body>
+<header><h1>Fury Fence layout preview</h1><label>Page<select id="page"><option value="/">Home</option><option value="/quote">Estimate</option><option value="/contact">Contact</option><option value="/chain-link-fence-edmonton">Chain-link service</option><option value="/commercial-fencing-edmonton">Commercial service</option><option value="/projects">Projects</option><option value="/about">About</option></select></label><label>Width<select id="width"><option value="320">320 px</option><option value="390" selected>390 px</option><option value="768">768 px</option><option value="1280">1280 px</option></select></label><p>Preview builds only. Do not submit test inquiries; forms use the live backend.</p></header>
+<div class="canvas"><iframe id="preview" title="Website layout" src="/" width="390"></iframe></div>
+<script>
+  const previewFrame=document.querySelector('#preview');
+  document.querySelector('#page').addEventListener('change',e=>previewFrame.src=e.target.value);
+  document.querySelector('#width').addEventListener('change',e=>previewFrame.width=e.target.value);
+</script>
+</body>
+</html>

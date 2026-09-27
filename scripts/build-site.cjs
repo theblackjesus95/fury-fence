@@ -397,11 +397,13 @@ fs.writeFileSync(
       .join("\n") +
     "\n",
 );
-if (preview)
+if (preview) {
   fs.writeFileSync(
     path.join(out, "_headers"),
     "/*\n  X-Robots-Tag: noindex, nofollow\n",
   );
+  fs.copyFileSync(path.join(root, "scripts/preview-layout.html"), path.join(out, "layout-check.html"));
+}
 fs.writeFileSync(
   path.join(out, "page-manifest.json"),
   JSON.stringify(pages, null, 2),
