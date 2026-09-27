@@ -1,0 +1,78 @@
+[
+  {
+    "source": "completed_job1.jpg",
+    "image": "galvanized-chain-link-perimeter",
+    "alt": "Galvanized chain-link fence with barbed-wire topping beside an open work area",
+    "caption": "Galvanized perimeter fencing",
+    "service": "industrial-fencing-edmonton"
+  },
+  {
+    "source": "project2.jpg",
+    "image": "black-chain-link-pedestrian-gate",
+    "alt": "Black chain-link pedestrian gate and fence beside an outdoor play area",
+    "caption": "Pedestrian gate and enclosure",
+    "service": "chain-link-gates-edmonton"
+  },
+  {
+    "source": "project3.jpg",
+    "image": "black-chain-link-building-perimeter",
+    "alt": "Black chain-link fence following the perimeter beside a low building",
+    "caption": "Black chain-link perimeter",
+    "service": "commercial-fencing-edmonton"
+  },
+  {
+    "source": "project4.jpg",
+    "image": "residential-black-chain-link-fence",
+    "alt": "Black chain-link fence along a residential yard with a house in the background",
+    "caption": "Residential yard fencing",
+    "service": "chain-link-fence-edmonton"
+  },
+  {
+    "source": "project5.jpg",
+    "image": "black-chain-link-open-yard",
+    "alt": "Black chain-link fence and gate across an open yard",
+    "caption": "Yard fence and access gate",
+    "service": "chain-link-fence-edmonton"
+  },
+  {
+    "source": "project6.jpg",
+    "image": "chain-link-fence-outbuilding",
+    "alt": "Black chain-link fence and gate near a small outbuilding",
+    "caption": "Fencing around an outbuilding",
+    "service": "chain-link-fence-edmonton"
+  },
+  {
+    "source": "project7.jpg",
+    "image": "metal-picket-equipment-enclosure",
+    "alt": "Black metal picket enclosure around equipment with yellow bollards in front",
+    "caption": "Metal picket equipment enclosure — portfolio photo"
+  },
+  {
+    "source": "project8.jpg",
+    "image": "chain-link-play-area-perimeter",
+    "alt": "Black chain-link fence separating a play area from the adjacent grounds",
+    "caption": "Play-area perimeter fencing",
+    "service": "commercial-fencing-edmonton"
+  },
+  {
+    "source": "project9.jpg",
+    "image": "black-chain-link-wide-yard-gate",
+    "alt": "Wide black chain-link gate opening into a fenced yard",
+    "caption": "Wide chain-link yard gate",
+    "service": "chain-link-gates-edmonton"
+  },
+  {
+    "source": "project10.jpg",
+    "image": "chain-link-building-access-gate",
+    "alt": "Black chain-link gate beside a building entrance and outdoor play area",
+    "caption": "Gate beside a building entrance",
+    "service": "chain-link-gates-edmonton"
+  },
+  {
+    "source": "project11.jpg",
+    "image": "chain-link-pet-yard-fence",
+    "alt": "Black chain-link fence beside a grassy yard with a dog behind the fence",
+    "caption": "Fenced yard for pets",
+    "service": "chain-link-fence-edmonton"
+  }
+]
